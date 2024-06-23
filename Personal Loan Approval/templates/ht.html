@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Loan Approval</title>
+    <style>
+        #hero {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: white;
+            background-color: #a6a6c9;
+            padding: 4rem 1rem;
+            border-radius: 8px;
+            
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+            z-index: 1;
+        }
+        #hero h1{
+color: orange;
+font-size: 20px;
+
+}
+#pare{
+          font-size: 18px;
+
+        }
+
+        #hero h1,
+        #hero p,
+        #learn-more {
+            position: relative;
+            z-index: 2;
+        }
+
+        #learn-more {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #learn-more:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000; /* Text color */
+    background: linear-gradient(to right, #ffffff, #cccccc); /* Linear gradient background */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    margin-top: 13px;
+}
+
+.button:hover {
+    background: linear-gradient(to right, #e2e2e2, #b3b3b3); /* Slightly darker gradient on hover */
+    color: #000; /* Text color on hover */
+}
+#header_hover1:hover{
+  text-decoration: underline;
+  
+}
+#header_hover2:hover{
+  text-decoration: underline;
+  
+}
+#header_hover3:hover{
+  text-decoration: underline;
+  
+}
+#img_logo{
+  height: 30px;
+  margin-bottom: 25px;
+}
+#header{
+  /* background-color: #f39c12; */
+  display: flex;
+  
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+#img-box{
+margin-top: 5px;
+}
+#img-box2{
+  margin-top: 5px;
+
+}
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+        <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+          <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+            <div class="flex items-center justify-between w-full md:w-auto">
+              <a href="#">
+                <span class="sr-only">Workflow</span>
+                <img id="img_logo" class="h-8 w-auto sm:h-10" src="../static/logo2.png" alt="Logo">
+              </a>
+              
+
+                <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8" id="header">
+                  <a href="/" class="font-medium text-gray-500 hover:text-gray-900" id="header_hover1">Home</a>
+                <a href="/predict" class="font-medium text-gray-500 hover:text-gray-900" id="header_hover2">Prediction</a>
+              <a href="/about" class="font-medium text-gray-500 hover:text-gray-900" id="header_hover3">About us</a>
+            
+              
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+          <div class="px-5 pt-4 flex items-center justify-between">
+            <div>
+              <img class="h-8 w-auto" src="../static/logo2.png" alt="Icon">
+            </div>
+            <div class="-mr-2">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+          </div>
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Homee</a>
+            <a href="/prediction" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Prediction</a>
+            <a href="/about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About us</a>
+            <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+          </div>
+        </div>
+      </div>
+      <main>
+        <section id="hero">
+          <h1>Loan Approval Prediction Using ML Models</h1>
+          <p id="pare">Welcome to our Loan Approval Prediction website, where we harness the power of machine learning to predict loan approval statuses with high accuracy. Our platform is designed to assist financial institutions and potential loan applicants by providing insights into the likelihood of loan approval based on various factors.</p>
+<p>
+    <a href="/predict" class="button">Prediction</a>
+</p>
+
+        </section>
+        <section id="features" class="container">
+          <div class="row">
+            <div class="col-md-4 feature">
+              <img src="../static/l5.jpg" alt="Feature 1" class="img-fluid rounded" id="img-box">
+              <h2 style="color: #e67e22;font-weight: bold;">Quick Loan Approval Prediction</h2>
+              <br>
+              <p> Our advanced machine learning model analyzes your application instantly, providing a reliable prediction of your loan approval status.</p>
+              <br>
+            </div>
+            <div class="col-md-4 feature">
+              <img src="../static/l4.png" alt="Feature 2" class="img-fluid rounded" id="img-box2">
+              <h2 style="color: #e67e22;font-weight: bold; " >Rapid Results</h2>
+              <br>
+              <p>Our system is designed to deliver fast results, ensuring you spend less time waiting and more time planning your next steps.</p>
+              <br>
+            </div>
+            <div class="col-md-4 feature">
+              <img src="../static/l3.png" alt="Feature 3" class="img-fluid rounded">
+              <h2 style="color: #e67e22;font-weight: bold;">Instant Loan Approval Decision</h2>
+              <br>
+              <p>Get your loan approval decision in seconds. Our efficient system processes your application swiftly, using powerful predictive analytics to provide an instant verdict.</p>
+              <br>
+            </div>
+          </div>
+        </section>
+      </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('learn-more').addEventListener('click', function() {
+            alert('More information will be available soon!');
+        });
+    </script>
+  </body>
+</html>
